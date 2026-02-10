@@ -14,7 +14,7 @@ public class ProductController {
 
     private List<Product> products = new ArrayList<>();
 
-    // STEP 4.1: Sample data (10 products)
+    
     public ProductController() {
         products.add(new Product(1L, "Laptop", "Gaming laptop", 1200.0, "Electronics", 5, "Dell"));
         products.add(new Product(2L, "Phone", "Smart phone", 800.0, "Electronics", 10, "Samsung"));

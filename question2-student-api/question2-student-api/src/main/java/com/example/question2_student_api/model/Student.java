@@ -9,11 +9,11 @@ public class Student {
     private String major;
     private Double gpa;
 
-    // No-args constructor
+   
     public Student() {
     }
 
-    // All-args constructor
+   
     public Student(Long studentId, String firstName, String lastName,
                    String email, String major, Double gpa) {
         this.studentId = studentId;

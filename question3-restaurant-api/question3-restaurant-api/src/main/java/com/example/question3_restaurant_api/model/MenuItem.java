@@ -6,10 +6,10 @@ public class MenuItem {
     private String name;
     private String description;
     private Double price;
-    private String category; // Appetizer, Main Course, Dessert, Beverage
+    private String category; 
     private boolean available;
 
-    // Constructor
+   
     public MenuItem(Long id, String name, String description,
             Double price, String category, boolean available) {
         this.id = id;
@@ -20,7 +20,7 @@ public class MenuItem {
         this.available = available;
     }
 
-    // Getters and Setters
+    
     public Long getId() {
         return id;
     }

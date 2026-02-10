@@ -15,7 +15,7 @@ public class StudentController {
 
     private List<Student> students = new ArrayList<>();
 
-    // Sample data (5 students)
+    
     public StudentController() {
         students.add(new Student(1L, "John", "Paul", "john@gmail.com", "Computer Science", 3.8));
         students.add(new Student(2L, "Mary", "Smith", "mary@gmail.com", "Information Systems", 3.2));
@@ -24,13 +24,13 @@ public class StudentController {
         students.add(new Student(5L, "James", "Green", "james@gmail.com", "Computer Science", 3.9));
     }
 
-    // 1️⃣ GET all students
+  
     @GetMapping
     public List<Student> getAllStudents() {
         return students;
     }
 
-    // 2️⃣ GET student by ID
+    
     @GetMapping("/{studentId}")
     public ResponseEntity<Student> getStudentById(@PathVariable Long studentId) {
         for (Student student : students) {
@@ -41,7 +41,7 @@ public class StudentController {
         return ResponseEntity.notFound().build();
     }
 
-    // 3️⃣ GET students by major
+    
     @GetMapping("/major/{major}")
     public List<Student> getStudentsByMajor(@PathVariable String major) {
         return students.stream()
@@ -49,7 +49,7 @@ public class StudentController {
                 .collect(Collectors.toList());
     }
 
-    // 4️⃣ Filter students by GPA
+
     @GetMapping("/filter")
     public List<Student> filterByGpa(@RequestParam Double gpa) {
         return students.stream()
@@ -57,14 +57,14 @@ public class StudentController {
                 .collect(Collectors.toList());
     }
 
-    // 5️⃣ Register new student
+    
     @PostMapping
     public ResponseEntity<Student> addStudent(@RequestBody Student student) {
         students.add(student);
         return new ResponseEntity<>(student, HttpStatus.CREATED);
     }
 
-    // 6️⃣ Update student info
+    
     @PutMapping("/{studentId}")
     public ResponseEntity<Student> updateStudent(
             @PathVariable Long studentId,

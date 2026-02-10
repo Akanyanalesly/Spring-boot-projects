@@ -14,7 +14,7 @@ public class TaskController {
 
     private List<Task> tasks = new ArrayList<>();
 
-    // STEP 4.1: Sample data
+    
     public TaskController() {
         tasks.add(new Task(1L, "Study Spring Boot", "Practice REST APIs", false, "HIGH", "2026-02-15"));
         tasks.add(new Task(2L, "Do assignment", "Finish Question 5", false, "MEDIUM", "2026-02-18"));
